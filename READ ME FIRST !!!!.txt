@@ -1,0 +1,11 @@
+SIMPLE CHESS GAME IN PYTHON
+
+
+Developed By: Muzzammil Hussain
+
+
+
+***** LEAVE A COMMENT IF YOU LOVED OUR WORK *****
+
+
+***Artificial Intelligence AI bot chess game *****

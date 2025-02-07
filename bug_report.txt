@@ -1,0 +1,243 @@
+----- 02/05/25 13:17:10 -----
+Traceback (most recent call last):
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 174, in play_as
+    game = make_AI_move(game, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 148, in make_AI_move
+    new_game = chess.make_move(game, chess.get_AI_move(game, AI_SEARCH_DEPTH))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1344, in get_AI_move
+    move = alpha_beta(game, game.to_move, depth)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1255, in alpha_beta
+    [_, score] = alpha_beta(new_game, opposing_color(color), depth-1, alpha, beta)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1213, in alpha_beta
+    [simple_move, simple_evaluation] = evaluated_move(game, color)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1161, in evaluated_move
+    for move in legal_moves(game, color):
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1089, in legal_moves
+    if is_legal_move(game, move):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1093, in is_legal_move
+    new_game = make_move(game, move)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 449, in make_move
+    new_game = deepcopy(game)
+               ^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 162, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 259, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 196, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\Lib\copy.py", line 134, in deepcopy
+    copier = _deepcopy_dispatch.get(cls)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+Playing as WHITE:
+	c2c4 g8f6 e2e4 f6e4 g2g4 e7e5 h2h4
+	rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq c3 0 1
+	rnbqkb1r/pppppppp/5n2/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 1 2
+	rnbqkb1r/pppppppp/5n2/8/2P1P3/8/PP1P1PPP/RNBQKBNR b KQkq e3 0 2
+	rnbqkb1r/pppppppp/8/8/2P1n3/8/PP1P1PPP/RNBQKBNR w KQkq - 0 3
+	rnbqkb1r/pppppppp/8/8/2P1n1P1/8/PP1P1P1P/RNBQKBNR b KQkq g3 0 3
+	rnbqkb1r/pppp1ppp/8/4p3/2P1n1P1/8/PP1P1P1P/RNBQKBNR w KQkq e6 0 4
+	rnbqkb1r/pppp1ppp/8/4p3/2P1n1PP/8/PP1P1P2/RNBQKBNR b KQkq h3 0 4
+-----------------------------
+
+----- 02/05/25 13:20:25 -----
+Traceback (most recent call last):
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 176, in play_as
+    if chess.game_ended(game):
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1148, in game_ended
+    return is_checkmate(game, WHITE) or \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1108, in is_checkmate
+    for _ in legal_moves(game, game.to_move):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1089, in legal_moves
+    if is_legal_move(game, move):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1094, in is_legal_move
+    return not is_check(new_game.board, game.to_move)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 927, in is_check
+    return is_attacked(get_king(board, color), board, opposing_color(color))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 924, in is_attacked
+    return count_attacks(target, board, attacking_color) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 973, in count_attacks
+    if get_attacks(pos, board, attacking_color) & target:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 937, in get_attacks
+    return bishop_attacks(moving_piece, board, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 809, in bishop_attacks
+    atks |= diagonal_attacks(piece, board, color) | anti_diagonal_attacks(piece, board, color)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 804, in anti_diagonal_attacks
+    return NW_attacks(single_piece, board, color) | SE_attacks(single_piece, board, color)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 787, in SE_attacks
+    blocker = msb(SE_ray(single_piece) & occupied_squares(board))
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 757, in SE_ray
+    ray_atks |= SE_one(ray_atks)
+                ^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 437, in SE_one
+    return south_one(east_one(bitboard))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 427, in south_one
+    def south_one(bitboard):
+    
+KeyboardInterrupt
+
+Playing as WHITE:
+	c2c4 e7e6 f2f4 d8h4
+	rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq c3 0 1
+	rnbqkbnr/pppp1ppp/4p3/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2
+	rnbqkbnr/pppp1ppp/4p3/8/2P2P2/8/PP1PP1PP/RNBQKBNR b KQkq f3 0 2
+	rnb1kbnr/pppp1ppp/4p3/8/2P2P1q/8/PP1PP1PP/RNBQKBNR w KQkq - 1 3
+-----------------------------
+
+----- 02/05/25 13:21:21 -----
+Traceback (most recent call last):
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 174, in play_as
+    game = make_AI_move(game, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 148, in make_AI_move
+    new_game = chess.make_move(game, chess.get_AI_move(game, AI_SEARCH_DEPTH))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1344, in get_AI_move
+    move = alpha_beta(game, game.to_move, depth)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1227, in alpha_beta
+    [_, score] = alpha_beta(new_game, opposing_color(color), depth-1, alpha, beta)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1213, in alpha_beta
+    [simple_move, simple_evaluation] = evaluated_move(game, color)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1164, in evaluated_move
+    if is_checkmate(make_move(game, move), opposing_color(game.to_move)):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1108, in is_checkmate
+    for _ in legal_moves(game, game.to_move):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1089, in legal_moves
+    if is_legal_move(game, move):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1094, in is_legal_move
+    return not is_check(new_game.board, game.to_move)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 927, in is_check
+    return is_attacked(get_king(board, color), board, opposing_color(color))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 924, in is_attacked
+    return count_attacks(target, board, attacking_color) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 973, in count_attacks
+    if get_attacks(pos, board, attacking_color) & target:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 939, in get_attacks
+    return rook_attacks(moving_piece, board, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 890, in rook_attacks
+    atks |= rank_attacks(single_piece, board, color) | file_attacks(single_piece, board, color)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 868, in rank_attacks
+    return east_attacks(single_piece, board, color) | west_attacks(single_piece, board, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 854, in east_attacks
+    blocker = lsb(east_ray(single_piece) & occupied_squares(board))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 391, in occupied_squares
+    return nnot(empty_squares(board))
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 388, in empty_squares
+    return list2int([ i == EMPTY for i in board ])
+                      ^^^^^^^^^^
+KeyboardInterrupt
+
+Playing as BLACK:
+	d2d4 f7f5 g1f3 h7h5
+	rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1
+	rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq f6 0 2
+	rnbqkbnr/ppppp1pp/8/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2
+	rnbqkbnr/ppppp1p1/8/5p1p/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq h6 0 3
+-----------------------------
+
+----- 02/05/25 13:22:53 -----
+Traceback (most recent call last):
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\gui.py", line 176, in play_as
+    if chess.game_ended(game):
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1148, in game_ended
+    return is_checkmate(game, WHITE) or \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1108, in is_checkmate
+    for _ in legal_moves(game, game.to_move):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1089, in legal_moves
+    if is_legal_move(game, move):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 1094, in is_legal_move
+    return not is_check(new_game.board, game.to_move)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 927, in is_check
+    return is_attacked(get_king(board, color), board, opposing_color(color))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 924, in is_attacked
+    return count_attacks(target, board, attacking_color) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 973, in count_attacks
+    if get_attacks(pos, board, attacking_color) & target:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 933, in get_attacks
+    return pawn_attacks(moving_piece, board, color)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 567, in pawn_attacks
+    return pawn_east_attacks(attacking_piece, board, color) | pawn_west_attacks(attacking_piece, board, color)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 591, in pawn_west_attacks
+    return SW_one(attacking_piece & get_colored_pieces(board, color))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 385, in get_colored_pieces
+    return list2int([ (i != EMPTY and i&COLOR_MASK == color) for i in board ])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artificial Intelligence projects\SimpleChess_GamePYTHON\chess game simple\chess.py", line 396, in list2int
+    return int('0b' + ''.join(['1' if i else '0' for i in rev_list]), 2)
+                               ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+Playing as WHITE:
+	d2d4 d7d5 g2g4 c8g4 a2a4 b8c6
+	rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1
+	rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq d6 0 2
+	rnbqkbnr/ppp1pppp/8/3p4/3P2P1/8/PPP1PP1P/RNBQKBNR b KQkq g3 0 2
+	rn1qkbnr/ppp1pppp/8/3p4/3P2b1/8/PPP1PP1P/RNBQKBNR w KQkq - 0 3
+	rn1qkbnr/ppp1pppp/8/3p4/P2P2b1/8/1PP1PP1P/RNBQKBNR b KQkq a3 0 3
+	r2qkbnr/ppp1pppp/2n5/3p4/P2P2b1/8/1PP1PP1P/RNBQKBNR w KQkq - 1 4
+-----------------------------
+
